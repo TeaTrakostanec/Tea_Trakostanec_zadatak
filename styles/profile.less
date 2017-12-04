@@ -56,6 +56,10 @@
   &__body-wrap {
     height: ~"calc(100% - 108px)";
     // overflow-y: scroll;
+
+    @media (max-width: 768px) {
+      height: ~"calc(100% - 60px)";
+    }
   }
 
   &__body {
