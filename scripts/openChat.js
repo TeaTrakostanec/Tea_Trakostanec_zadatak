@@ -6,8 +6,9 @@ const chatHeader = $('.chat__header');
 const chatFooter = $('.chat__footer');
 const chatBody = $('.chat__body');
 const wWidth = $(window).width();
+const screenWidth = 768;
 
-if (wWidth <= 768) {
+if (wWidth <= screenWidth) {
   btnOpenChat.each(function () {
     const self = $(this);
 
