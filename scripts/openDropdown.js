@@ -1,5 +1,5 @@
-const headerMenu = $('.chatlist__header-menu');
-const btnOpen = headerMenu.find('.btn--open');
+const app = $('.app__wrapper');
+const btnOpen = app.find('.btn--open');
 
 btnOpen.click(function (e) {
     const $this = $(this);
@@ -7,4 +7,12 @@ btnOpen.click(function (e) {
     e.preventDefault();
 
     dropdown.fadeToggle();
+});
+
+$(function() {
+  $(document).click(function(e) {
+    if ($(e.target).is(btnOpen) === false) {
+      $('.dropdown').fadeOut();
+    }
+  });
 });

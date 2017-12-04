@@ -12,7 +12,6 @@ let openProfile = function (e) {
   profile.addClass('profile--show');
   avatarBig.addClass('show-content');
   proileText.addClass('show-content');
-  $('.dropdown').hide();
 }
 
 openProfileBtn.click(openProfile);
