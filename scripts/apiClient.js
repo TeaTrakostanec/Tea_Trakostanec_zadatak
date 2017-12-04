@@ -9,17 +9,12 @@ let apiClient = (function(){
             phone: '385965590665 ',
             password: 'secret'
           },
-          dataType: 'jsonp',
-          jsonp: "callback",
+          dataType: 'json',
           success: function(data) {
-          console.log(data);
       }
 
       });
     }
-     function callback(data){
-       alert('a');
-     }
 
     return {
         login: login
