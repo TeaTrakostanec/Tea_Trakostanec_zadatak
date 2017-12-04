@@ -1,0 +1,43 @@
+.message {
+  height: 100%;
+
+  &__wrap {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-flexbox;
+    display: flex;
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    max-width: 100%;
+    padding: 10px 19px;
+  }
+  
+  &__input-container {
+    margin-left: 20px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__input{
+    height: 40px;
+    width: inherit;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+
+  &__record {
+    margin-left: 20px;
+  }
+
+  &__send {
+    position: absolute;
+    right: 16px;
+    margin-left: 20px;
+    display: none;
+  }
+}

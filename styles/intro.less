@@ -1,0 +1,41 @@
+.intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+
+  @media (max-width: 768px)  {
+    display: none;
+  }
+
+  &__heading {
+    color: #4b5961;
+    font-size: 36px;
+  }
+
+  &__text {
+    color: #929fa6;
+    margin-top: 24px;
+  }
+
+  &__link {
+    color: #07bc4c;
+    cursor: pointer;
+
+    &:hover {
+      color: #07bc4c;
+      text-decoration: none;
+    }
+  }
+
+  &__icon {
+    margin: 0 5px 0 0;
+
+    svg {
+      vertical-align: middle;
+    }
+  }
+}

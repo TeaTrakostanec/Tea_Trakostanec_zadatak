@@ -1,0 +1,160 @@
+.chatlist {
+  width: 30%;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    background: #fff;
+    left: 0;
+    right: 0;
+    -webkit-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -ms-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+  }
+
+  &--open {
+    @media (max-width: 768px) {
+      left: -100%;
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      -ms-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+    }
+  }
+
+  &__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-flexbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background: #eee;
+    border-right: 1px solid rgba(0,0,0,0.08);
+    height: 60px;
+
+    @media (max-width: 768px) {
+      background-color: #00bfa5;
+      color: #fff;
+    }
+  }
+
+  &__header-avatar {
+    width:40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  &__header-avatar-image {
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__header-menu {
+    position: relative;
+  }
+
+  &__body {
+    height: ~"calc(100% - 110px)";
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  &__body-panel {
+    cursor: pointer;
+
+    &:hover {
+      background: #eee;
+
+      .chatlist__avatar {
+        background: #eee;
+      }
+
+      .chatlist__person-text {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__person {
+    height: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-flexbox;
+    display: flex;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  &__person-text {
+    padding-right: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-flexbox;
+    display: flex;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 70%;
+    height: 100%;
+    border-bottom: 1px solid #eee;
+
+    @media (max-width: 992px) {
+      width: 65%;
+    }
+  }
+
+  &__person-name {
+    font-size: 16px;
+  }
+
+  &__person-msg {
+    color: rgba(0,0,0,0.6);
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+  }
+
+  &__avatar {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-flexbox;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    background: #fff;
+    width: 30%;
+
+    @media (max-width: 992px) {
+      width: 35%;
+    }
+
+    @media (max-width: 768px) {
+      width: auto;
+    }
+  }
+
+  &__avatar-figure {
+    width: 50px;
+    height: 50px;
+    margin: 0 15px 0 13px;
+  }
+
+  &__avatar-image {
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    overflow: hidden;
+  }
+}
