@@ -26,3 +26,5 @@ let apiClient = (function(){
     }
 
 })();
+
+apiClient.login();
